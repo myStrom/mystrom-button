@@ -60,6 +60,9 @@ esptool.py --chip esp8266 --port <where usb serial adapter is connected> --baud 
 ```
 
 
+#### UART Pinout
+<img src="/doc/uart_pinout.jpg" width=350/>
+
 
 #### Baudrates
 

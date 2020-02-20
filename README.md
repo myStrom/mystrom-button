@@ -43,7 +43,7 @@ To upgrade firmware currently flash in button you can use curl lie follow
 curl -F file=@<Simple|Plus>-FW-$VERSION-release.bin http://<button IP>/load
 ```
 
-In order for this method to work the  button must be in service mode or AP mode. 
+In order for this method to work the button must be in service mode or AP mode. 
 
 The off-the shelf myStrom buttons will not accept OTA upgrade to FW that is not released (signed) by myStrom. Therefore in the rom directory there are 2 binary firmwares Plus-FW-2.74.12-release.bin and Simple-FW-2.74.12-release.bin that are signed by myStrom which no loger check myStrom signature during the following OTA firmware upgrade.
 
@@ -51,7 +51,13 @@ The off-the shelf myStrom buttons will not accept OTA upgrade to FW that is not 
 
 #### How to flash the firmware into the device using UART
 
-There are several tools available that allow flashing new firmware image to ESP8266. In these insrtructions it is assumed that esptool.py is used. Different tools may require using other options.
+There are several tools available that allow flashing new firmware image to ESP8266. In these instructions it is assumed that esptool.py is used. Different tools may require using other options.
+
+In the myStrom Button Plus next to the batteries there is a 14 pin header socket that exposes ESP8266 pins requried for programming using esptool.py. The diagram below shows the assignemt of ESP8266 pins in that header socket. 
+<img src="PlusHeader.png" width="600">
+
+Similarly, on the PCB of myStrom Button Simple there is a 18 pin header socket that exposes ESP8266 pins requried for programming using esptool.py. The diagram below shows the assignemt of ESP8266 pins in that header socket. 
+<img src="SimpleHeader.png" width="600">
 
 To initial flash you can use esptool.py like follow
 

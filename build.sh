@@ -24,7 +24,7 @@ rm -f /vagrant/*.bin
 cd 
 
 [ -d "crosstool-NG" ] || {
-	git clone --recursive -b xtensa-1.22.x 'https://github.com/espressif/crosstool-NG.git'
+	git clone --recursive -b xtensa-1.22.x 'https://github.com/frostworx/crosstool-NG.git'
 	cd 'crosstool-NG'
 	./bootstrap
 	./configure --enable-local
